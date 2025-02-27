@@ -2,67 +2,67 @@ from playwright.sync_api import sync_playwright
 
 def test_toggle_scorers():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)  # 启动可视化模式
+        browser = p.chromium.launch(headless=False)  
         page = browser.new_page()
         
-        # 1️⃣ 进入 BBC 体育 Scores & Fixtures 页面
+        # 1️⃣ Go to main page
         page.goto("https://www.bbc.co.uk/sport/football/scores-fixtures")
 
-        # 2️⃣ 选择日期：点击 "Wed 26"（2025-02-26）
+        # 2️⃣ Because when it's early morning the match page don't have the Show Scorers botton,so I need to do the test on previous day.
         date_button = page.locator("a[data-testid='datepicker-date-link-2025-02-26']")
         date_button.click()
-        print("✅ 'Wed 26' 日期按钮已点击")
+        print("✅ 'Wed 26' botton clicked")
 
-        # 3️⃣ 等待页面加载新的数据
-        page.wait_for_timeout(2000)  # 等待页面更新
+        # 3️⃣ wait for refresh
+        page.wait_for_timeout(2000)  
 
-        # 4️⃣ 查找 "Show Scorers" 按钮
+        # 4️⃣ search "Show Scorers" botton
         show_scorers_button = page.locator("button:has-text('Show Scorers')")
 
-        # 5️⃣ 点击 "Show Scorers"
+        # 5️⃣ click "Show Scorers"
         show_scorers_button.click()
-        print("✅ 'Show Scorers' 按钮已点击")
+        print("✅ 'Show Scorers' clicked")
 
-        # 6️⃣ 等待比分信息加载
+        # 6️⃣ wait for change
         page.wait_for_selector(".ssrcss-uq6ar7-KeyEventsAway.evc6ssb0", timeout=5000)
         page.wait_for_selector(".ssrcss-1gpz3ae-KeyEventsHome.evc6ssb1", timeout=5000)
 
-        # 7️⃣ 获取特定比赛的比分元素
+        # 7️⃣ get info of Scorers for both sides
         away_scores = page.locator(".ssrcss-uq6ar7-KeyEventsAway.evc6ssb0")
         home_scores = page.locator(".ssrcss-1gpz3ae-KeyEventsHome.evc6ssb1")
 
-        # 确保至少有一个比分元素
-        assert away_scores.count() > 0, "❌ 未找到客队比分"
-        assert home_scores.count() > 0, "❌ 未找到主队比分"
+        # make sure at least one was found
+        assert away_scores.count() > 0, "❌ Away team score not found"
+        assert home_scores.count() > 0, "❌ Home team score not found"
 
-        # 选择 **第一个比赛的比分**
+        # select the first one found
         away_score_visible = away_scores.nth(0).is_visible()
         home_score_visible = home_scores.nth(0).is_visible()
 
-        assert away_score_visible, "❌ 客队比分未能显示"
-        assert home_score_visible, "❌ 主队比分未能显示"
+        assert away_score_visible, "❌ Away team score not be shown"
+        assert home_score_visible, "❌ home team score not be shown"
 
-        print("✅ 比分信息正确显示")
+        print("✅ the Scorers info was shown correctly!")
 
-        # 8️⃣ 点击 “Hide Scorers” 按钮
+        # 8️⃣ Click “Hide Scorers” botton
         hide_scorers_button = page.locator("button:has-text('Hide Scorers')")
         hide_scorers_button.click()
-        print("✅ 'Hide Scorers' 按钮已点击")
+        print("✅ 'Hide Scorers' clicked")
 
-        # 9️⃣ 等待比分信息隐藏
-        page.wait_for_timeout(2000)  # 等待页面更新
+        # 9️⃣ wait for hide
+        page.wait_for_timeout(2000)  # refresh
 
-        # 🔟 断言比分信息是否隐藏
+        # 🔟 identify if the Scorers info was hidden
         away_score_hidden = away_scores.nth(0).is_hidden()
         home_score_hidden = home_scores.nth(0).is_hidden()
 
-        assert away_score_hidden, "❌ 客队比分未能隐藏"
-        assert home_score_hidden, "❌ 主队比分未能隐藏"
+        assert away_score_hidden, "❌ Away team score not be hidden"
+        assert home_score_hidden, "❌ home team score not be hidden"
 
-        print("✅ 比分信息正确隐藏")
+        print("✅ the Scorers info was hidden correctly! ")
 
         browser.close()
 
-# 直接运行
+# Run
 if __name__ == "__main__":
     test_toggle_scorers()
