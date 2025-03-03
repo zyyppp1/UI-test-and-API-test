@@ -1,0 +1,22 @@
+Scenario 2: Application Form Validation Issues
+
+Test Case ID: MA_TC_04
+
+Title: Mandatory Field Blank – Error Message Display
+
+Description: Ensure that when a single required field (e.g., Email) is left blank, an appropriate validation message appears for that specific field upon submission attempt.
+
+Precondition: The application form is loaded with all fields visible; at least one required field is intentionally left empty while others are filled correctly.
+
+Steps:
+	1.	Fill out the job application form, except leave one required field blank (for example, leave the Email field empty while filling all other required fields).
+	2.	Click the Submit button to attempt form submission.
+	3.	Check the page for an error message related to the blank Email field.
+
+Expected Result: A clearly visible error message (for example, “Email is required”) is displayed near the Email field (or in a general error summary indicating Email is missing). The message accurately identifies the blank field. The form is not accepted/submitted due to this validation error.
+
+Actual Result: N/A – (To be filled after execution)
+
+Status: Not Executed (Pass/Fail after test execution)
+
+ENV: Chrome /MacOS

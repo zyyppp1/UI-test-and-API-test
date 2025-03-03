@@ -1,0 +1,33 @@
+Scenario 3: Navigation & Link Functionality
+
+Test Case ID: MA_TC_06
+
+Title: Navigation Menu Functionality
+
+Description: Verify that each main navigation link on the Adserve website correctly redirects to its respective page, and that the navigation menu remains consistent (same links and layout) across all pages.
+
+Precondition: Adserve website is accessible and the homepage (https://www.adserve.com/) is open in a web browser.
+
+Steps:
+	1.	On the homepage, locate the main navigation menu (e.g., links for Home, Join the Team, Register Interest, Contact if available).
+	2.	Click on the “Join the Team” navigation link.
+	3.	Verify that the browser navigates to the Join the Team page (check that the URL and page heading/content correspond to the Join the Team page).
+	4.	On the Join the Team page, confirm that the main navigation menu is present and displays the same set of links (Home, Join the Team, Register Interest, Contact) in the same order/style.
+	5.	Click on the “Register Interest” navigation link.
+	6.	Verify that the browser navigates to the Register Interest page (check URL and that the page shows the registration form).
+	7.	On the Register Interest page, again verify that the navigation menu is present and consistent with the other pages.
+	8.	(If a “Contact” link is part of the site’s navigation or footer) Click the “Contact” link.
+	9.	Verify that the Contact Us page or section loads correctly (check for contact information/form on the page). Also ensure the navigation menu is visible on this page as well.
+	10.	From any subpage (Join the Team, Register Interest, or Contact), click the “Home” link in the navigation menu.
+	11.	Verify that the browser returns to the Home page and that the navigation menu on the Home page is present and unchanged.
+
+Expected Result:
+	•	Clicking each main navigation item takes the user to the correct page: Join the Team link opens the Join the Team page; Register Interest opens the Register Interest page; Contact (if available) opens the Contact Us page; Home returns to the homepage.
+	•	The content on each target page loads properly (no errors or blank pages) and the page corresponds to the link clicked (e.g., Join the Team page shows career opportunities, Contact page shows contact form/info).
+	•	The navigation menu appears on all these pages with the same options (consistent layout and links), allowing the user to navigate further.
+
+Actual Result: N/A – (To be filled after execution)
+
+Status: Not Executed (Pass/Fail after test execution)
+
+ENV: Chrome /MacOS

@@ -1,0 +1,22 @@
+Scenario 2: Application Form Validation Issues
+
+Test Case ID: MA_TC_05
+
+Title: Form Submission Blocked Until All Required Fields are Completed
+
+Description: Ensure the application form cannot be successfully submitted if any required information is missing, meaning the user must fill all mandatory fields and fix errors before the form will go through.
+
+Precondition: The application form is open. At least one required field is left blank (or has an unresolved validation error) to simulate an incomplete form.
+
+Steps:
+	1.	Enter valid inputs into some fields but deliberately leave one or more required fields blank (or with invalid data).
+	2.	Click the Submit button to try to send the application.
+	3.	Monitor the application’s behavior after submission attempt (e.g., does it navigate to a “success” page, or remain on the form?).
+
+Expected Result: The form does not submit successfully. The page remains on the form, highlighting the missing/erroneous fields with validation messages. No success confirmation is shown, and the application data is not sent until the user provides all required information correctly.
+
+Actual Result: N/A – (To be filled after execution)
+
+Status: Not Executed (Pass/Fail after test execution)
+
+ENV: Chrome /MacOS

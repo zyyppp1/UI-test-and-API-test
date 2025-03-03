@@ -1,0 +1,33 @@
+Scenario 3: Navigation & Link Functionality
+
+Test Case ID: MA_TC_07
+
+Title: External Links Verification
+
+Description: Verify that all external links on the Adserve website function correctly. This includes checking that they open in a new browser tab (when appropriate) so the user doesn’t lose the Adserve site, and confirming that the external content is relevant and up to date (no incorrect or outdated pages).
+
+Precondition: Adserve site pages containing external links (e.g., Contact Us page with social media/support links) are accessible. The tester can open new browser tabs/windows from the test environment.
+
+Steps:
+	1.	On the Adserve website, find all external links – these are links that lead to websites outside of adserve.com. For example:
+	•	The contact email link (mailto) or any “Contact” hyperlink that opens an email client (if present).
+	•	Social media links such as Twitter (twitter.com/adserveplc) and LinkedIn (linkedin.com/company/adserveplc).
+	•	Any other third-party links or references on the site.
+	2.	For each external link identified, click the link and observe the behavior:
+	•	New Tab/Window: Confirm that the link opens in a new browser tab or window. 
+	•	Correct Page Load: Verify that the external page loads successfully. 
+	3.	Check the content of each external page for relevance and currency:
+	•	Verify the page is indeed related to Adserve 
+	•	Ensure there are no obvious issues on the external page 
+	4.	Close the external pages and return focus to the Adserve site.
+
+Expected Result:
+	•	Each external hyperlink opens in a separate tab or window, preserving the Adserve website in the original tab.
+	•	The external pages load without errors and display the expected content. 
+	•	All external content is relevant and up-to-date: The links lead to the correct official pages.
+
+Actual Result: N/A – (To be filled after execution)
+
+Status: Not Executed (Pass/Fail after test execution)
+
+ENV: Chrome /MacOS

@@ -1,0 +1,23 @@
+Scenario 2: Application Form Validation Issues
+
+Test Case ID: MA_TC_02
+
+Title: Required Fields Validation on Job Application Form
+
+Description: Verify that all mandatory fields (e.g., Name, Email, Resume/CV upload, etc.) on the job application form are validated such that they cannot be left empty without prompting an error.
+
+Precondition: The job application form (accessible via “Apply” on the Join the Team page or specific job page) is displayed, and all required fields are marked (often with an asterisk *).
+
+Steps:
+	1.	Navigate to the job application form on the Adserve site (for example, click “Apply Here” for a specific job opening).
+	2.	Leave all required fields blank (do not fill in Name, Email, and do not upload a resume, etc.).
+	3.	Attempt to submit the form by clicking the Submit button.
+	4.	Observe the form’s response and any validation messages that appear.
+
+Expected Result: The form is not submitted. For each required field left blank, a clear error message is displayed (e.g., “Name is required”, “Email is required”, “Please upload your resume/CV”). The messages should appear immediately after clicking submit, indicating which fields need input.
+
+Actual Result: N/A – (To be filled after execution)
+
+Status: Not Executed (Pass/Fail after test execution)
+
+ENV: Chrome /MacOS

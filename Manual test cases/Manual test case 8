@@ -1,0 +1,29 @@
+Scenario 3: Register Your Interest
+
+Test Case ID: MA_TC_08
+
+Title: Email Field Validation
+
+Description: Ensure that the Email address field only accepts inputs in a valid email format. The test will enter various invalid email formats to verify the form displays an appropriate validation message for each and does not allow submission until a valid email is provided. Once a valid email is entered (with all other required fields valid), the form should submit successfully.
+
+Precondition: User is on the “Register Your Interest” page with the form ready to be filled. All other required fields (Full Name, Job Title, Organisation, Country, and “Finally, are you…” selection) are filled with valid data except the Email field, which will be tested with different inputs.
+
+Steps:
+	1.	In the Email field, enter an invalid email address (e.g., "userexample.com" – missing the ‘@’ symbol).
+	2.	Fill in all other required fields with valid information (Full Name, Job Title, Organisation, Country, and select an option for “Finally, are you…”).
+	3.	Click the Submit button.
+	4.	Observe any validation message for the Email field and whether the form submits.
+	5.	Without refreshing the page, correct the Email field to another invalid format (e.g., "user@.com" – missing the domain name) and attempt to submit again.
+	6.	Observe the validation message. Then correct the Email field to a valid format (e.g., "user@example.com").
+	7.	Click the Submit button once more and observe the result.
+
+Expected Result:
+	•	For each invalid email input (steps 1 and 5): The form does not submit, and an error message is displayed near the Email field indicating the email address is not in a valid format (for example, “Please enter a valid email address.”). The form should highlight or prompt that the email is invalid.
+	•	After entering a valid email format (step 6) and submitting (step 7): The error message for the Email field disappears, and the form submits successfully (assuming all other required fields remain valid). The user might see a success message or be redirected as appropriate for a successful submission.
+
+
+Actual Result: N/A – (To be filled after execution)
+
+Status: Not Executed (Pass/Fail after test execution)
+
+ENV: Chrome /MacOS

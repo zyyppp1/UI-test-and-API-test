@@ -1,1 +1,22 @@
-Here is the manual test 1 :
+Scenario 1: Job Listings Image Consistency Issue
+
+Test Case ID: MA_TC_01
+
+Title: Unique and Relevant Image for Each Job Listing
+Description: Verify that each job listing on the “Join the Team” page displays a distinct image that is relevant to the job role.
+
+Precondition: The “Join the Team” page is accessible and lists multiple job openings, each expected to have its own image.
+
+Steps:
+	1.	Navigate to the Adserve “Join the Team” page.
+	2.	Scroll through the list of current open opportunities/job listings.
+	3.	Observe the image associated with each job listing.
+	4.	Compare images between all listed jobs to check for duplicates or irrelevant visuals.
+
+Expected Result: Every job listing has its own unique image that appropriately reflects or relates to the position. No two job listings should share the same image, and no image appears out of context (e.g., no generic placeholder).
+
+Actual Result: N/A – (To be filled after execution)
+
+Status: Not Executed (Pass/Fail after test execution)
+
+ENV: Chrome /MacOS

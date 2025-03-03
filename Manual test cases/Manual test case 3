@@ -1,0 +1,23 @@
+Scenario 2: Application Form Validation Issues
+
+Test Case ID: MA_TC_03
+
+Title: Resume Upload – Invalid File Format Rejection
+
+Description: Check that uploading a resume in an unsupported file format triggers an appropriate error and does not allow form submission. (The form should accept only specified formats, e.g., PDF or DOC/DOCX files.)
+
+Precondition: The application form is open and ready for file upload. Accepted resume file formats are known (e.g., as stated on the form, only PDF or Word documents are allowed).
+
+Steps:
+	1.	On the job application form, locate the Upload Your CV field.
+	2.	Attempt to attach a file with an invalid format (for example, a .png image file or a .txt file) instead of a PDF or Word document.
+	3.	After selecting the invalid file, try to submit the form.
+	4.	Observe any error message or validation response related to the file upload field.
+
+Expected Result: The system rejects the invalid resume file. An error message is shown, such as “Unsupported file format. Please upload a PDF or Word document.” The form is not submitted while the resume file is in a wrong format, and the user is prompted to upload an allowed file type.
+
+Actual Result: N/A – (To be filled after execution)
+
+Status: Not Executed (Pass/Fail after test execution)
+
+ENV: Chrome /MacOS
